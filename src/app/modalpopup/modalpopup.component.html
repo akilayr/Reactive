@@ -1,0 +1,53 @@
+ <form [formGroup]="Reactiveform" (ngSubmit)="saveOrder()">
+    <div mat-dialog-content>
+        <mat-form-field>
+            <mat-label>orderID</mat-label>
+            <input placeholder="orderID" matInput formControlName="orderID">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Order Number</mat-label>
+            <input placeholder="Order Number" matInput formControlName="orderNumber">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Received</mat-label>
+            <input placeholder="Received" matInput formControlName="received">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Started Date</mat-label>
+            <input placeholder="Started Date" matInput formControlName="startedDate">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Completed Date</mat-label>
+            <input placeholder="Completed Date" matInput formControlName="completedDate">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Assigned To</mat-label>
+            <input placeholder="Assigned To" matInput formControlName="assignedTo">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Completed By</mat-label>
+            <input placeholder="Completed By" matInput formControlName="completedBy">
+        </mat-form-field>
+        <!-- <mat-form-field>
+            <mat-label>Designation</mat-label>
+           <mat-select formControlName="designation">
+<mat-option *ngFor="let item of desdata" [value]="item.code">
+{{item.name}}
+</mat-option>
+           </mat-select>
+        </mat-form-field> -->
+        <!-- <mat-radio-group formControlName="gender" aria-label="Select an Gender">
+            <mat-radio-button value="M">Male</mat-radio-button>
+            <mat-radio-button value="F">Female</mat-radio-button>
+          </mat-radio-group> -->
+          <!-- <section class="example-section">
+            <br>
+            <mat-checkbox formControlName="isactive" class="example-margin">Is Active</mat-checkbox>
+          </section> -->
+ 
+    </div>
+    <div mat-dialog-actions>
+      <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+      <button type="submit" mat-raised-button color="primary" cdkFocusInitial>Save</button>
+    </div>
+</form>
